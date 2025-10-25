@@ -9,9 +9,10 @@ const getSum = () => {
 		sum += parseFloat(p.textContent)
 	})
 	  const totalRow = document.createElement('tr');
+	totalRow.classList.add('total-row')
 	const totalCell = document.createElement('td');
-	totalCell.colSpan = 2;
-	totalCell.textContent = `Total is ${sum}`
+	totalCell.colspan = 2;
+	totalCell.textContent = `Total  ${sum}`
 	totalRow.appendChild(totalCell)
 	document.getElementById('grocery').appendChild(totalRow);
 };

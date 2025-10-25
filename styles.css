@@ -1,2 +1,6 @@
 
 /* Your CSS Code here. */
+.total-row{
+	display:flex;
+	justify-content:center;
+}
