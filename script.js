@@ -10,11 +10,15 @@ const getSum = () => {
 	})
 	  const totalRow = document.createElement('tr');
 	totalRow.classList.add('total-row')
+	const totalLabel = document.createElement('td');
 	const totalCell = document.createElement('td');
-	totalCell.colspan = 2;
-	totalCell.textContent = `Total  ${sum}`
-	totalRow.appendChild(totalCell)
-	document.getElementById('grocery').appendChild(totalRow);
+
+	totalLabel.textContent = "Total Price"
+	
+	totalCell.textContent = sum;
+	totalRow.append(totalLabel,totalCell)
+		totalRow.id = 'ans';
+	document.querySelector('table').appendChild(totalRow);
 };
 
 getSumBtn.addEventListener("click", getSum);
